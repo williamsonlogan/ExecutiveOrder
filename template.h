@@ -23,7 +23,10 @@ class app
 		void Begin( void );
 		int Loop( void );
 		void End( void );
+		void loadAssets();
 		void gameScreenDraw(void);
+		void newsFeedDraw(void);
+		void helpScreenDraw(void);
 };
 
 extern app App;
