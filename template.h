@@ -23,6 +23,7 @@ class app
 		void Begin( void );
 		int Loop( void );
 		void End( void );
+		void gameScreenDraw(void);
 };
 
 extern app App;

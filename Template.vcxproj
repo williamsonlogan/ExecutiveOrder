@@ -88,7 +88,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\common\Include;..\..\common;..\..\bullet;..\..\bullet\BulletCollision\CollisionShapes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Logan\OneDrive\AGK\ExecOrder\windows\agk\bullet\BulletCollision;C:\Users\Logan\OneDrive\AGK\ExecOrder\windows\agk\bullet;C:\Users\Logan\OneDrive\AGK\ExecOrder\windows\agk\common\include;C:\Users\Logan\OneDrive\AGK\ExecOrder\windows\agk\common;C:\Users\Logan\OneDrive\AGK\ExecOrder\windows\agk;..\..\common\Include;..\..\common;..\..\bullet;..\..\bullet\BulletCollision\CollisionShapes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;IDE_VS2008;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -207,6 +207,7 @@
   <ItemGroup>
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="execorder.cpp" />
+    <ClCompile Include="gamescreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="template.h" />
