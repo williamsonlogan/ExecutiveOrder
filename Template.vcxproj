@@ -205,7 +205,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Core.cpp" />
-    <ClCompile Include="testaga.cpp" />
+    <ClCompile Include="execorder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="template.h" />
