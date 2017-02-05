@@ -16,9 +16,27 @@ void app::Begin(void)
 
 int app::Loop(void)
 {
-	//agk::Print(agk::ScreenFPS());
+	//Local Vars
+	int currentGameScreen = 0;
 
-	app::gameScreenDraw();
+	//Prints FPS
+	agk::Print(agk::ScreenFPS());
+
+	//Draw Function Calls
+	switch (currentGameScreen)
+	{
+	case 0:
+		app::gameScreenDraw();
+		break;
+	case 1:
+		app::helpScreenDraw();
+		break;
+	case 2:
+		app::newsFeedDraw();
+		break;
+	default:
+		break;
+	}
 
 	if (agk::GetRawKeyPressed(27))
 	{
