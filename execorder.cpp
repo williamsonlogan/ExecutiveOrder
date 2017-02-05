@@ -12,6 +12,9 @@ void app::Begin(void)
 	agk::SetClearColor(235, 186, 109);
 	agk::SetBorderColor(0, 0, 0);
 	app::loadAssets();
+	stack <Order> executive_orders;
+	FILE *orders_file = fopen("orders.csv", "r");
+	queue_all_orders(orders_file, executive_orders);
 }
 
 int app::Loop(void)
