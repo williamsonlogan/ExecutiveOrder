@@ -48,6 +48,7 @@ void queue_all_orders(FILE *infile, stack<Order> orders)
 	{
 		queue_exec_order(infile, orders);
 	}
+	agk::Print("Success");
 }
 
 /*
@@ -108,7 +109,18 @@ Order Exec(stack<Order> orders)
 		return (phil.top());
 }
 
-
+//Function that modifies stats based on executive order decision
+void update_stats(int result, int *global_money, int *global_happy, int *global_military, int *global_foreign,
+	Order new_order);
+{
+	if (result == 1)
+	{
+		*global_money += new_order.money;
+		*global_happy += new_order.happy;
+		*global_military += new_order.military;
+		*global_foreign += new_order.foreign;
+	}
+}
 
 
 

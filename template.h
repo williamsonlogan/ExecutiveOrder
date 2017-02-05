@@ -35,9 +35,15 @@ void queue_exec_order(FILE *infile, stack<Order> orders);
 //Basically, this function builds the stack of orders
 void queue_all_orders(FILE *infile, stack<Order> orders);
 
+//Function that peeks, pops, and returns the the order that was on top
 Order Exec(stack<Order> orders);
 
+//Function that shuffles all the orders in the stack
 void shuffleAllTheDecks(stack<Order> orders);
+
+//Function that modifies stats based on executive order decision
+void update_stats(int result, int *global_money, int *global_happy, int *global_military, int *global_foreign,
+	Order new_order);
 
 
 #define DEVICE_WIDTH 720

@@ -7,6 +7,11 @@ using namespace AGK;
 app App;
 
 int freshLoad = 1, showOrder = 0, iSprite = 0, execLoc = 100, execApprov = 0, execClicked = 0;
+int money = 50, happy = 50, military = 50, foreign = 50;
+Order current_order;
+
+stack <Order> executive_orders;
+FILE *orders_file = fopen("orders.csv", "r");
 
 
 void app::Begin(void)
@@ -16,9 +21,6 @@ void app::Begin(void)
 	agk::SetBorderColor(0, 0, 0);
 	app::loadAssets();
 
-	stack <Order> executive_orders;
-	FILE *orders_file;
-    orders_file = fopen("orders.csv", "r");
 	queue_all_orders(orders_file, executive_orders);
 
 }
@@ -28,6 +30,10 @@ int app::Loop(void)
 	//agk::Print(showOrder);
 	//agk::Print((int)floor(agk::GetPointerX()));
 	//agk::Print(iSprite);
+	agk::Print(money);
+	agk::Print(happy);
+	agk::Print(military);
+	agk::Print(foreign);
 
 	app::gameScreenDraw();
 
@@ -58,7 +64,9 @@ int app::Loop(void)
 
 		if (showOrder == 0 && iSprite == 6)
 		{
-			agk::CreateSprite(5, 5);
+			current_order = Exec(executive_orders);
+			int tag = current_order.image_tag;
+			agk::CreateSprite(5, tag);
 			agk::SetSpritePosition(5, 40, 100);
 			showOrder = 1;
 		}
@@ -93,6 +101,8 @@ int app::Loop(void)
 			if (execLoc > 750)
 			{
 				execApprov = 1;
+				update_stats(execApprov, &money, &happy, &military, &foreign,
+					current_order);
 				agk::DeleteSprite(5);
 				execLoc = 100;
 				showOrder = 0;
