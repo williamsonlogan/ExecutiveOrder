@@ -33,7 +33,7 @@ int app::Loop(void)
 			agk::CreateSprite(3, 3);
 			agk::CreateSprite(4, 4);
 
-			freshLoad == 0;
+			freshLoad = 0;
 		}
 		app::gameScreenDraw();
 
