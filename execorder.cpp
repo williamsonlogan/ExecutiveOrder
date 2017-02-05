@@ -5,7 +5,7 @@
 using namespace AGK;
 
 app App;
-int freshLoad = 1;
+int freshLoad = 1, showOrder = 1;
 
 void app::Begin(void)
 {
@@ -35,7 +35,27 @@ int app::Loop(void)
 
 			freshLoad = 0;
 		}
+
+		if (agk::GetRawKeyPressed(32))
+		{
+			agk::CreateSprite(5, 5);
+			if (showOrder == 1)
+			{
+				showOrder = 0;
+				agk::DeleteSprite(5);
+			}
+			else
+			{
+				showOrder = 1;
+			}
+		}
+
 		app::gameScreenDraw();
+
+		if (showOrder == 1)
+		{
+			agk::SetSpritePosition(5, 40, 100);
+		}
 
 
 

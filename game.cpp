@@ -11,6 +11,7 @@ void app::loadAssets()
 	agk::LoadImage(2, "media/sprites/office.png");
 	agk::LoadImage(3, "media/sprites/window.png");
 	agk::LoadImage(4, "media/sprites/phone.png");
+	agk::LoadImage(5, "media/sprites/execorder.png");
 
 	agk::DeleteSprite(1);
 }
