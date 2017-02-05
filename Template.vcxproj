@@ -212,6 +212,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="hackathon_executiveorder_queue.h" />
     <ClInclude Include="template.h" />
   </ItemGroup>
   <ItemGroup>
