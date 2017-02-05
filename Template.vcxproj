@@ -205,17 +205,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Desktop\Computer Science\Computer Science 122\Lab Work\Hackathon_Executive_Order_Queue\Hackathon_Executive_Order_Queue\hackathon_executiveorder_queue.cpp" />
-    <ClCompile Include="..\..\..\Desktop\Computer Science\Computer Science 122\Lab Work\Hackathon_Executive_Order_Queue\Hackathon_Executive_Order_Queue\main.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="execorder.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="hackathon_executiveorder_queue.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="template.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\Desktop\Computer Science\Computer Science 122\Lab Work\Hackathon_Executive_Order_Queue\Hackathon_Executive_Order_Queue\orders.csv" />
+    <None Include="orders.csv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
