@@ -208,9 +208,16 @@
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="execorder.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="hackathon_executiveorder_queue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="template.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="orders.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="executive_orders.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
