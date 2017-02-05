@@ -85,19 +85,19 @@ void shuffleAllTheDecks(stack<Order> orders)
 				case 0:
 					if(shuffleOne.size() != 0)
 					{
-						orders.push(shuffleOne());
+						orders.push(shuffleOne.top());
 						orders.pop();
 					}
 						break;
 				case 1:
 					if(shuffleTwo.size() != 0)                                  
 					{                                                           
-						orders.push(shuffleTwo());                          
+						orders.push(shuffleTwo.top());                          
 						orders.pop();                                       
 					} 
 						break;
 		}
-	}while((shuffleOne.size() != 0) || (shuffleTwo.size() != 0))
+	} while ((shuffleOne.size() != 0) || (shuffleTwo.size() != 0));
 }
 
 Order Exec(stack<Order> orders)
