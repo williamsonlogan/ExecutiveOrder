@@ -1,4 +1,4 @@
-// Common Includes (for Win32)
+//Common Includes (for Win32) hihihi
 
 // windows 7 for touch commands
 #define _WIN32_WINNT 0x0601

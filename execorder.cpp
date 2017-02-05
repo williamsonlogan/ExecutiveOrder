@@ -12,31 +12,16 @@ void app::Begin(void)
 	agk::SetClearColor(235, 186, 109);
 	agk::SetBorderColor(0, 0, 0);
 	app::loadAssets();
+	stack <Order> executive_orders;
+	FILE *orders_file = fopen("orders.csv", "r");
+	queue_all_orders(orders_file, executive_orders);
 }
 
 int app::Loop(void)
 {
-	//Local Vars
-	int currentGameScreen = 0;
+	//agk::Print(agk::ScreenFPS());
 
-	//Prints FPS
-	agk::Print(agk::ScreenFPS());
-
-	//Draw Function Calls
-	switch (currentGameScreen)
-	{
-	case 0:
-		app::gameScreenDraw();
-		break;
-	case 1:
-		app::helpScreenDraw();
-		break;
-	case 2:
-		app::newsFeedDraw();
-		break;
-	default:
-		break;
-	}
+	app::gameScreenDraw();
 
 	if (agk::GetRawKeyPressed(27))
 	{
