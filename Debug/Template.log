@@ -1,4 +1,6 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Template.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   execorder.cpp
+execorder.cpp(72): warning C4551: function call missing argument list
+execorder.cpp(81): warning C4551: function call missing argument list
   Template.vcxproj -> C:\Users\Logan\OneDrive\AGK\ExecOrder\windows\Final\ExecOrder.exe
   Template.vcxproj -> Final\ExecOrder.pdb (Full PDB)

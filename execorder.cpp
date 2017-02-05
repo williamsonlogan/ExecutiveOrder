@@ -6,7 +6,7 @@ using namespace AGK;
 
 app App;
 
-int freshLoad = 1, showOrder = 1;
+int freshLoad = 1, showOrder = 0, iSprite = 0;
 
 
 void app::Begin(void)
@@ -25,7 +25,7 @@ void app::Begin(void)
 int app::Loop(void)
 {
 
-	//agk::Print(agk::ScreenFPS());
+	agk::Print((int)floor(agk::GetPointerX()));
 
 	app::gameScreenDraw();
 
@@ -44,21 +44,21 @@ int app::Loop(void)
 			agk::CreateSprite(2, 2);
 			agk::CreateSprite(3, 3);
 			agk::CreateSprite(4, 4);
+			agk::CreateSprite(6, 6);
 
 			freshLoad = 0;
 		}
 
-		if (agk::GetRawKeyPressed(32))
+		if (agk::GetPointerPressed())
+			iSprite = agk::GetSpriteHit(agk::GetPointerX(), agk::GetPointerY());
+
+		if (showOrder == 0 && iSprite == 6)
 		{
 			agk::CreateSprite(5, 5);
-			if (showOrder == 1)
-			{
-				showOrder = 0;
-				agk::DeleteSprite(5);
-			}
-			else
+			if (showOrder == 0)
 			{
 				showOrder = 1;
+				iSprite = 0;
 			}
 		}
 
@@ -66,7 +66,25 @@ int app::Loop(void)
 
 		if (showOrder == 1)
 		{
+			if(iSprite == 0)
 			agk::SetSpritePosition(5, 40, 100);
+
+			if (agk::GetPointerPressed)
+			{
+				iSprite = agk::GetSpriteHit(agk::GetPointerX(), agk::GetPointerY());
+				if (iSprite == 5)
+				{
+					agk::SetSpritePosition(5, agk::GetPointerX() - 350, 100);
+				}
+			}
+
+			if (agk::GetPointerReleased)
+			{
+				if (iSprite == 5)
+				{
+					iSprite = 0;
+				}
+			}
 		}
 
 

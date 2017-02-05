@@ -2,7 +2,7 @@
 #define _H_AGK_TEMPLATE_
 
 // Link to GDK libraries
-#include "AGK.h"
+#include "agk.h"
 
 //Nates work and header files for stacks and crap
 

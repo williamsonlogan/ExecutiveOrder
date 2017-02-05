@@ -12,6 +12,7 @@ void app::loadAssets()
 	agk::LoadImage(3, "media/sprites/window.png");
 	agk::LoadImage(4, "media/sprites/phone.png");
 	agk::LoadImage(5, "media/sprites/execorder.png");
+	agk::LoadImage(6, "media/sprites/exec_small.png");
 
 	agk::DeleteSprite(1);
 }
@@ -21,6 +22,7 @@ void app::gameScreenDraw()
 	agk::SetSpritePosition(2, 0, 0);
 	agk::SetSpritePosition(3, 16, 225);
 	agk::SetSpritePosition(4, 575, 1050);
+	agk::SetSpritePosition(6, 250, 1050);
 }
 
 void app::newsFeedDraw(void)
