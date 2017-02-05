@@ -8,18 +8,18 @@ void app::loadAssets()
 	agk::LoadImage(1, "media/sprites/loading.png");
 	agk::CreateSprite(1, 1);
 	agk::SetSpritePosition(1, 0, 0);
-	agk::LoadImage(2, "media/sprites/officetemp.png");
-	agk::CreateSprite(2, 2);
+	agk::LoadImage(2, "media/sprites/office.png");
 	agk::LoadImage(3, "media/sprites/window.png");
-	agk::CreateSprite(3, 3);
+	agk::LoadImage(4, "media/sprites/phone.png");
 
 	agk::DeleteSprite(1);
 }
 
-void app::gameScreenDraw(void)
+void app::gameScreenDraw()
 {
 	agk::SetSpritePosition(2, 0, 0);
 	agk::SetSpritePosition(3, 16, 225);
+	agk::SetSpritePosition(4, 575, 1050);
 }
 
 void app::newsFeedDraw(void)

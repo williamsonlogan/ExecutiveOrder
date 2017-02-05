@@ -24,7 +24,7 @@ class app
 		int Loop( void );
 		void End( void );
 		void loadAssets();
-		void gameScreenDraw(void);
+		void gameScreenDraw();
 		void newsFeedDraw(void);
 		void helpScreenDraw(void);
 };

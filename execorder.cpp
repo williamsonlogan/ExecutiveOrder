@@ -5,6 +5,7 @@
 using namespace AGK;
 
 app App;
+int freshLoad = 1;
 
 void app::Begin(void)
 {
@@ -26,13 +27,30 @@ int app::Loop(void)
 	switch (currentGameScreen)
 	{
 	case 0:
+		if (freshLoad == 1)
+		{
+			agk::CreateSprite(2, 2);
+			agk::CreateSprite(3, 3);
+			agk::CreateSprite(4, 4);
+
+			freshLoad == 0;
+		}
 		app::gameScreenDraw();
+
+
+
 		break;
 	case 1:
 		app::helpScreenDraw();
+
+
+
 		break;
 	case 2:
 		app::newsFeedDraw();
+
+
+
 		break;
 	default:
 		break;
