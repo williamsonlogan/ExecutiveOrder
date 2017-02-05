@@ -5,10 +5,9 @@
 using namespace AGK;
 
 app App;
-<<<<<<< HEAD
-=======
+
 int freshLoad = 1, showOrder = 1;
->>>>>>> parent of 6fdb58c... Logans all the things
+
 
 void app::Begin(void)
 {
@@ -16,21 +15,20 @@ void app::Begin(void)
 	agk::SetClearColor(235, 186, 109);
 	agk::SetBorderColor(0, 0, 0);
 	app::loadAssets();
-<<<<<<< HEAD
-	stack <Order> executive_orders;
-	FILE *orders_file = fopen("orders.csv", "r");
-	queue_all_orders(orders_file, executive_orders);
-=======
->>>>>>> parent of 6fdb58c... Logans all the things
+
+	//stack <Order> executive_orders;
+	//FILE *orders_file = fopen("orders.csv", "r");
+	//queue_all_orders(orders_file, executive_orders);
+
 }
 
 int app::Loop(void)
 {
-<<<<<<< HEAD
+
 	//agk::Print(agk::ScreenFPS());
 
 	app::gameScreenDraw();
-=======
+
 	//Local Vars
 	int currentGameScreen = 0;
 
@@ -89,7 +87,6 @@ int app::Loop(void)
 	default:
 		break;
 	}
->>>>>>> parent of 6fdb58c... Logans all the things
 
 	if (agk::GetRawKeyPressed(27))
 	{
