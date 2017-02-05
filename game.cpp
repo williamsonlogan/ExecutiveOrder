@@ -14,6 +14,9 @@ void app::loadAssets()
 	agk::LoadImage(5, "media/sprites/execorder.png");
 	agk::LoadImage(6, "media/sprites/exec_small.png");
 
+	//Loading Orders
+
+
 	agk::DeleteSprite(1);
 }
 
