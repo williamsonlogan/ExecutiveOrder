@@ -26,14 +26,14 @@ void queue_exec_order(FILE *infile, stack<Order> orders)
 	new_order.foreign = atoi(temp); //Stores the foreign value
 	
 
-	//Test that it was read correctly (debugging)
+/*	//Test that it was read correctly (debugging)
 	cout << "IMG #: " << new_order.image_tag << endl;
 	cout << new_order.money << endl;
 	cout << new_order.happy << endl;
 	cout << new_order.military << endl;
 	cout << new_order.foreign << endl;
 	cout << endl;
-
+*/
 	//Pushes the new node onto the stack
 	orders.push(new_order);
 
@@ -61,3 +61,55 @@ new_order.military = stoi(item); //Stores the military value
 getline(infile, item, ',');
 new_order.foreign = stoi(item); //Stores the foreign value
 */
+
+void shuffleAllTheDecks(stack<Order> orders)
+{
+	srand(time(NULL)); int decider;
+	stack<Order> shuffleOne, shuffleTwo;
+	int deckSize = 0;
+	deckSize = orders.size()/2;
+	//place half the deck into each stack
+	for(int i = orders.size(); i != 0; i++)
+	{
+		shuffleOne.push(orders.top());
+		orders.pop();
+		shuffleTwo.push(orders.top());
+		orders.pop();
+		i = orders.size();
+	}
+	do
+	{
+		decider = rand() % 2;
+		switch(decider)
+		{
+				case 0:
+					if(shuffleOne.size() != 0)
+					{
+						orders.push(shuffleOne());
+						orders.pop();
+					}
+						break;
+				case 1:
+					if(shuffleTwo.size() != 0)                                  
+					{                                                           
+						orders.push(shuffleTwo());                          
+						orders.pop();                                       
+					} 
+						break;
+		}
+	}while((shuffleOne.size() != 0) || (shuffleTwo.size() != 0))
+}
+
+Order Exec(stack<Order> orders)
+{
+	stack<Order> phil;
+	phil.push(orders.top());
+	orders.pop();
+		return (phil.top());
+}
+
+
+
+
+
+

@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <fstream>
+#include <time.h>
 
 using namespace std;
 
