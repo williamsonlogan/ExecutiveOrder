@@ -1,4 +1,4 @@
-// Includes
+﻿// Includes
 #include "template.h"
 
 // Namespace
@@ -22,17 +22,23 @@ void app::Begin(void)
 	app::loadAssets();
 
 	queue_all_orders(orders_file, executive_orders);
+	agk::Print(executive_orders.size());
 
 }
 
 int app::Loop(void)
 {
+	//agk::Print(executive_orders.size());
 	//agk::Print(showOrder);
 	//agk::Print((int)floor(agk::GetPointerX()));
 	//agk::Print(iSprite);
+	agk::PrintC("$: ");
 	agk::Print(money);
+	agk::PrintC(":): ");
 	agk::Print(happy);
+	agk::PrintC("^: ");
 	agk::Print(military);
+	agk::PrintC("[=]: ");
 	agk::Print(foreign);
 
 	app::gameScreenDraw();
@@ -41,7 +47,7 @@ int app::Loop(void)
 	int currentGameScreen = 0;
 
 	//Prints FPS
-	agk::Print(agk::ScreenFPS());
+	//agk::Print(agk::ScreenFPS());
 
 	//Draw Function Calls
 	switch (currentGameScreen)
@@ -53,6 +59,33 @@ int app::Loop(void)
 			agk::CreateSprite(3, 3);
 			agk::CreateSprite(4, 4);
 			agk::CreateSprite(6, 6);
+			agk::CreateSprite(7, 7);
+			agk::AddSpriteAnimationFrame(7, agk::LoadImage("media/sprites/sun/sun1.png"));
+			agk::AddSpriteAnimationFrame(7, agk::LoadImage("media/sprites/sun/sun2.png"));
+			agk::AddSpriteAnimationFrame(7, agk::LoadImage("media/sprites/sun/sun3.png"));
+			agk::AddSpriteAnimationFrame(7, agk::LoadImage("media/sprites/sun/sun4.png"));
+			agk::PlaySprite(7, .25f, 1, 1, 4);
+			agk::CreateSprite(8, 8);
+			agk::AddSpriteAnimationFrame(8, agk::LoadImage("media/sprites/person/person().png"));
+			agk::AddSpriteAnimationFrame(8, agk::LoadImage("media/sprites/person/person(1).png"));
+			agk::AddSpriteAnimationFrame(8, agk::LoadImage("media/sprites/person/person(2).png"));
+			agk::AddSpriteAnimationFrame(8, agk::LoadImage("media/sprites/person/person(3).png"));
+			agk::AddSpriteAnimationFrame(8, agk::LoadImage("media/sprites/person/person(4).png"));
+			agk::PlaySprite(8, 2, 1, 1, 5);
+			agk::CreateSprite(9, 8);
+			agk::AddSpriteAnimationFrame(9, agk::LoadImage("media/sprites/person/person().png"));
+			agk::AddSpriteAnimationFrame(9, agk::LoadImage("media/sprites/person/person(1).png"));
+			agk::AddSpriteAnimationFrame(9, agk::LoadImage("media/sprites/person/person(2).png"));
+			agk::AddSpriteAnimationFrame(9, agk::LoadImage("media/sprites/person/person(3).png"));
+			agk::AddSpriteAnimationFrame(9, agk::LoadImage("media/sprites/person/person(4).png"));
+			agk::PlaySprite(9, 2, 1, 1, 5);
+			agk::CreateSprite(10, 8);
+			agk::AddSpriteAnimationFrame(10, agk::LoadImage("media/sprites/person/person().png"));
+			agk::AddSpriteAnimationFrame(10, agk::LoadImage("media/sprites/person/person(1).png"));
+			agk::AddSpriteAnimationFrame(10, agk::LoadImage("media/sprites/person/person(2).png"));
+			agk::AddSpriteAnimationFrame(10, agk::LoadImage("media/sprites/person/person(3).png"));
+			agk::AddSpriteAnimationFrame(10, agk::LoadImage("media/sprites/person/person(4).png"));
+			agk::PlaySprite(10, 2, 1, 1, 5);
 
 			freshLoad = 0;
 		}
@@ -122,6 +155,18 @@ int app::Loop(void)
 			execClicked = 0;
 		}
 
+		if (happy < 35)
+		{
+
+		}
+		else if (happy > 75)
+		{
+
+		}
+		else
+		{
+
+		}
 
 		break;
 	case 1:

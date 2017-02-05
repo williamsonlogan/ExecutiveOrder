@@ -2,7 +2,7 @@
 
 //Function that reads in one line from the CSV file of executive orders;
 //Pushes one order onto the 
-void queue_exec_order(FILE *infile, stack<Order> orders)
+void queue_exec_order(FILE *infile, stack<Order>& orders)
 {
 	//New order initialized
 	Order new_order;
@@ -41,7 +41,7 @@ void queue_exec_order(FILE *infile, stack<Order> orders)
 
 //Function that queues every order in the file
 //Basically, this function builds the stack of orders
-void queue_all_orders(FILE *infile, stack<Order> orders)
+void queue_all_orders(FILE *infile, stack<Order>& orders)
 {
 	
 	while (!feof(infile))
@@ -101,17 +101,17 @@ void shuffleAllTheDecks(stack<Order> orders)
 	} while ((shuffleOne.size() != 0) || (shuffleTwo.size() != 0));
 }
 
-Order Exec(stack<Order> orders)
+Order Exec(stack<Order> &executive_orders)
 {
-	stack<Order> phil;
-	phil.push(orders.top());
-	orders.pop();
-		return (phil.top());
+	Order phil;
+	phil = executive_orders.top();
+	executive_orders.pop();
+	return phil;
 }
 
 //Function that modifies stats based on executive order decision
 void update_stats(int result, int *global_money, int *global_happy, int *global_military, int *global_foreign,
-	Order new_order);
+	Order new_order)
 {
 	if (result == 1)
 	{

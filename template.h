@@ -29,14 +29,14 @@ typedef struct exec_order
 //Function that reads in one line from the CSV file of executive orders;
 //Stores in an order, pushes onto the stack
 //Helper function for queue_all_orders
-void queue_exec_order(FILE *infile, stack<Order> orders);
+void queue_exec_order(FILE *infile, stack<Order>& orders);
 
 //Function that queues every order in the file
 //Basically, this function builds the stack of orders
-void queue_all_orders(FILE *infile, stack<Order> orders);
+void queue_all_orders(FILE *infile, stack<Order>& orders);
 
 //Function that peeks, pops, and returns the the order that was on top
-Order Exec(stack<Order> orders);
+Order Exec(stack<Order> &orders);
 
 //Function that shuffles all the orders in the stack
 void shuffleAllTheDecks(stack<Order> orders);

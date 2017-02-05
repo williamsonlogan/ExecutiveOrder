@@ -13,6 +13,11 @@ void app::loadAssets()
 	agk::LoadImage(4, "media/sprites/phone.png");
 	agk::LoadImage(5, "media/sprites/execorder.png");
 	agk::LoadImage(6, "media/sprites/exec_small.png");
+	agk::LoadImage(7, "media/sprites/sun/sun1.png");
+	agk::LoadImage(8, "media/sprites/person/person().png");
+	
+
+	//Loading Orders
 	agk::LoadImage(31, "media/sprites/Executive_Orders/execorder().png");
 	agk::LoadImage(32, "media/sprites/Executive_Orders/execorder.png");
 	agk::LoadImage(33, "media/sprites/Executive_Orders/execorder(1).png");
@@ -46,8 +51,6 @@ void app::loadAssets()
 	agk::LoadImage(61, "media/sprites/Executive_Orders/execorder(29).png");
 	agk::LoadImage(62, "media/sprites/Executive_Orders/execorder(30).png");
 
-	//Loading Orders
-
 
 	agk::DeleteSprite(1);
 }
@@ -58,6 +61,10 @@ void app::gameScreenDraw()
 	agk::SetSpritePosition(3, 16, 225);
 	agk::SetSpritePosition(4, 575, 1050);
 	agk::SetSpritePosition(6, 250, 1050);
+	agk::SetSpritePosition(7, 100, 325);
+	agk::SetSpritePosition(8, 100, 525);
+	agk::SetSpritePosition(9, 150, 525);
+	agk::SetSpritePosition(10, 250, 525);
 }
 
 void app::newsFeedDraw(void)
